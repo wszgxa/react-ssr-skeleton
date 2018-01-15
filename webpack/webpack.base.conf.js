@@ -1,5 +1,3 @@
-const webpack = require('webpack')
-
 module.exports = () => {
   return {
     module: {
@@ -8,15 +6,12 @@ module.exports = () => {
           test: /\.jsx?$/,
           enforce: "pre",
           exclude: /node_modules/,
-          loader: 'eslint-loader',
-          options: {
-            failOnError: true,
-          }
+          loader: 'eslint-loader'
         },
         {
            test: /\.jsx?$/,
            exclude: /node_modules/,
-           loader: 'babel-loader',
+           loader: 'babel-loader'
         }
       ]
     },
