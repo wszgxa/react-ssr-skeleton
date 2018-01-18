@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { fetchLists } from '../../models/lists'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux';
-
+import { bindActionCreators } from 'redux'
+import './style.scss'
 
 class ListPage extends Component {
 
