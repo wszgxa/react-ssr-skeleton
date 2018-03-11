@@ -1,6 +1,3 @@
-/**
- * Created by gxzhao on 30/12/2017.
- */
 try {
   require('babel-register')
   require('./src/server/app')

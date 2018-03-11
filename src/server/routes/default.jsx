@@ -13,7 +13,7 @@ import getDefaultVariables from '../rendering/getDefaultVariables'
 
 const store = createStore(reducers, applyMiddleware(thunk));
 
-import routes from '../../client/routes.jsx'
+import routes from '../../client/routes'
 const router = express.Router()
 
 router.get('*', (req, res) => {
