@@ -1,7 +1,10 @@
+## description
+A react server side render skeleton, prepare for future project.
+
 ## dev
 ```$xslt
-yarn dev-client
-yarn dev-server
+yarn start:dev-client
+yarn start:dev-server
 ```
 
 ## prod
@@ -10,3 +13,9 @@ yarn clean
 yarn build
 yarn start:prod
 ```
+
+## todo list
+
+- [ ] css handle in prod 
+- [ ] performance
+- [ ] spike `babel-plugin-css-modules-transform` influence in prod
