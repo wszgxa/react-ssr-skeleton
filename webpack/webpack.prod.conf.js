@@ -9,7 +9,7 @@ module.exports = () => {
   return webpackMerge(baseConfig(), {
     entry: path.resolve(__dirname, '..', './src/client/app.js'),
     output: {
-      path: path.resolve(__dirname, '..', './public/js'),
+      path: path.resolve(__dirname, '..', './public'),
       filename: 'app-[hash].js'
     },
     plugins: [
@@ -28,7 +28,7 @@ module.exports = () => {
       }),
       new ManifestPlugin({
         fileName: 'manifest.json',
-        basePath: '/js/'
+        basePath: '/'
       }),
       new ExtractTextPlugin('app-[contenthash].css')
     ]

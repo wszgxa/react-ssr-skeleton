@@ -3,6 +3,7 @@
 <head>
   {% block head %}
   <title> {{ title }} </title>
+  {{ cssAssets | safe }}
   {% endblock %}
 </head>
 <body>

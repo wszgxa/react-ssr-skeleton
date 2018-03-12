@@ -22,7 +22,6 @@ router.get('*', (req, res) => {
     let fetchData = route.component.fetchData
     return fetchData instanceof Function ? fetchData(store) : Promise.resolve(null)
   })
-
   return Promise.all(promises).then(() => {
     let context = {};
     const content = renderToString(

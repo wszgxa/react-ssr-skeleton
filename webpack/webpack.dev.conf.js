@@ -9,7 +9,7 @@ module.exports = () => {
     devtool: 'eval',
     entry: path.resolve(__dirname, '..', './src/client/app.js'),
     output: {
-      path: path.resolve(__dirname, '..', './public/js'),
+      path: path.resolve(__dirname, '..', './public'),
       filename: 'app.js'
     },
     plugins: [

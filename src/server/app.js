@@ -3,7 +3,7 @@ import path from 'path'
 import logger from 'morgan'
 import nunjucks from 'nunjucks'
 import bodyParser from 'body-parser'
-import routes from './routes/default.jsx'
+import routes from './routes/default.js'
 import { PORT, HOST } from '../../config/env/index.js'
 
 const app = express()
