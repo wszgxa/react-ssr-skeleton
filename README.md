@@ -16,6 +16,7 @@ yarn start:prod
 
 ## todo list
 
-- [ ] css handle in prod 
+- [x] css handle in prod 
 - [ ] performance
 - [ ] spike `babel-plugin-css-modules-transform` influence in prod
+- [ ] circleci

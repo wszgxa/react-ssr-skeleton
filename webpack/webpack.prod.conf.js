@@ -4,6 +4,7 @@ const webpackMerge = require('webpack-merge')
 const baseConfig = require('./webpack.base.conf')
 const ManifestPlugin = require('webpack-manifest-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 
 module.exports = () => {
   return webpackMerge(baseConfig(), {
@@ -30,7 +31,12 @@ module.exports = () => {
         fileName: 'manifest.json',
         basePath: '/'
       }),
-      new ExtractTextPlugin('app-[contenthash].css')
+      new ExtractTextPlugin('app-[contenthash].css'),
+      new OptimizeCssAssetsPlugin({
+        cssProcessor: require('cssnano'),
+        cssProcessorOptions: { discardComments: { removeAll: true } },
+        canPrint: true
+      })
     ]
   })
 }
