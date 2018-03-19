@@ -7,9 +7,9 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = () => {
   return webpackMerge(baseConfig(), {
     devtool: 'eval',
-    entry: path.resolve(__dirname, '..', './src/client/app.js'),
+    entry: path.resolve(__dirname, '../..', './src/client/app.js'),
     output: {
-      path: path.resolve(__dirname, '..', './public'),
+      path: path.resolve(__dirname, '../..', './public'),
       filename: 'app.js'
     },
     plugins: [

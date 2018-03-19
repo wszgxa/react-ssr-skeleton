@@ -11,6 +11,7 @@ import routes from './routes'
 import reducers from './models'
 
 const store = createStore(reducers, window.__INITIAL_STATE__, applyMiddleware(thunk))
+delete window.__INITIAL_STATE__
 
 const AppRouter = () => {
   return (

@@ -8,9 +8,9 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 
 module.exports = () => {
   return webpackMerge(baseConfig(), {
-    entry: path.resolve(__dirname, '..', './src/client/app.js'),
+    entry: path.resolve(__dirname, '../..', './src/client/app.js'),
     output: {
-      path: path.resolve(__dirname, '..', './public'),
+      path: path.resolve(__dirname, '../..', './public'),
       filename: 'app-[hash].js'
     },
     plugins: [

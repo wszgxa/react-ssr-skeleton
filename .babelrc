@@ -9,7 +9,7 @@
           "css-modules-transform",
           {
             "extensions": [".css", ".scss", ".less"], // list extensions to process; defaults to .css
-            "generateScopedName": "[hash:8]" // in case you don't want to use a function
+            "processCss": "./config/babel/processCss.js"
           }
         ]
       ]

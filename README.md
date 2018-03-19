@@ -17,6 +17,7 @@ yarn start:prod
 ## todo list
 
 - [x] css handle in prod 
-- [ ] performance
-- [ ] spike `babel-plugin-css-modules-transform` influence in prod
-- [ ] circleci
+- [x] performance [best-practice-performance](https://expressjs.com/en/advanced/best-practice-performance.html)
+- [x] spike `babel-plugin-css-modules-transform` influence in prod
+- [ ] add flow type check
+- [ ] redundant http request in client side
