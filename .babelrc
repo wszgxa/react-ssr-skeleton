@@ -1,19 +1,6 @@
 {
   "presets": [
     "react", "es2015", "stage-0"
-  ],
-  "env": {
-    "server": {
-      "plugins": [
-        [
-          "css-modules-transform",
-          {
-            "extensions": [".css", ".scss", ".less"], // list extensions to process; defaults to .css
-            "processCss": "./config/babel/processCss.js"
-          }
-        ]
-      ]
-    }
-  }
+  ]
 }
 

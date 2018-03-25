@@ -3,8 +3,8 @@ import { generateDevAssets, generateProdAssets } from '../generateAssets'
 describe('#generateDevAssets', () => {
   it('should return correct dev model Assets', () => {
     expect(generateDevAssets()).toEqual({
-      scriptAssets: '<script src="/app.js" type="text/javascript"></script>',
-      cssAssets: '<link rel="stylesheet" type="text/css" href="/app.css">'
+      scriptAssets: '<script src="/public/app.js" type="text/javascript"></script>',
+      cssAssets: '<link rel="stylesheet" type="text/css" href="/public/app.css">'
     })
   })
 })
