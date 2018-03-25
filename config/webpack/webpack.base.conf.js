@@ -20,7 +20,14 @@ module.exports = () => {
           test: /\.(s)*css$/,
           use: ExtractTextPlugin.extract({
             fallback: 'style-loader',
-            use: ['css-loader', 'sass-loader', 'postcss-loader']
+            use: ['css-loader', 'sass-loader', {
+              loader: 'postcss-loader',
+              options: {
+                config: {
+                  path: path.resolve(__dirname, "postcss.config.js"),
+                }
+              }
+            }]
           })
         }
       ]

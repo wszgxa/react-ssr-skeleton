@@ -19,5 +19,6 @@ yarn start:prod
 - [x] css handle in prod 
 - [x] performance [best-practice-performance](https://expressjs.com/en/advanced/best-practice-performance.html)
 - [x] spike `babel-plugin-css-modules-transform` influence in prod
+- [ ] build prod js file
 - [ ] add flow type check
 - [ ] redundant http request in client side
