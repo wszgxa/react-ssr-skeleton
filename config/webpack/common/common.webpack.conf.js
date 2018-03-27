@@ -10,16 +10,17 @@ module.exports = {
         loader: 'eslint-loader'
       },
       {
-          test: /\.jsx?$/,
-          exclude: /node_modules/,
-          loader: 'babel-loader'
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader'
       }
     ]
   },
   resolve: {
     extensions: ['.js', '.jsx'],
     alias: {
-      '@client': path.join(__dirname, '..', '..', '..', 'src/client')
+      '@client': path.join(__dirname, '..', '..', '..', 'src/client'),
+      '@server': path.join(__dirname, '..', '..', '..', 'src/server')
     }
   }
 }

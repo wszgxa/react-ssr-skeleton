@@ -3,7 +3,7 @@ const webpack = require('webpack')
 const merge = require('webpack-merge')
 const client = require('./common/client.webpack.conf')
 const ManifestPlugin = require('webpack-manifest-plugin')
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 
 module.exports = merge(client, {

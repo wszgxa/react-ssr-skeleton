@@ -13,13 +13,13 @@ describe('#generateProdAssets', () => {
   it('should return', () => {
     jest.mock('../../../../public/manifest.json', () => {
       return {
-        '/main.js': 'test-js',
-        '/main.css': 'test-css'
+        '/main.js': '/test-js',
+        '/main.css': '/test-css'
       }
     })
     expect(generateProdAssets()).toEqual({
-      scriptAssets: '<script src="test-js" type="text/javascript"></script>',
-      cssAssets: '<link rel="stylesheet" type="text/css" href="test-css">'
+      scriptAssets: '<script src="/public/test-js" type="text/javascript"></script>',
+      cssAssets: '<link rel="stylesheet" type="text/css" href="/public/test-css">'
     })
   })
 })

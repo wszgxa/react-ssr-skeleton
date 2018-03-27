@@ -7,7 +7,8 @@
     "start:dev": "gulp start:dev",
     "clean": "rm -rf public",
     "start:prod": "gulp start:prod",
-    "build": "gulp client-build",
+    "eslint": "eslint --ext .js,.jsx src config",
+    "build": "gulp build:client",
     "test": "jest --coverage",
     "test:watch": "jest --watch"
   },
@@ -19,7 +20,6 @@
   "author": "hiluluke",
   "license": "MIT",
   "dependencies": {
-    "babel-register": "^6.26.0",
     "body-parser": "^1.18.2",
     "cookie-parser": "^1.4.3",
     "express": "^4.16.2",

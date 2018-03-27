@@ -1,4 +1,4 @@
-const path = require('path');
+const path = require('path')
 const merge = require('webpack-merge')
 const client = require('./common/client.webpack.conf')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')

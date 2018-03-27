@@ -7,11 +7,11 @@ import './style.scss'
 class ListPage extends Component {
 
   static fetchData(store) {
-    return store.dispatch(fetchLists());
+    return store.dispatch(fetchLists())
   }
 
   componentDidMount() {
-    this.props.fetchLists();
+    this.props.fetchLists()
   }
 
   render () {
@@ -32,7 +32,7 @@ class ListPage extends Component {
 }
 
 const mapStateToProps = (state) => { return { items: state.lists.items} }
-const mapDispatchToProps = (dispatch) => bindActionCreators({ fetchLists }, dispatch);
+const mapDispatchToProps = (dispatch) => bindActionCreators({ fetchLists }, dispatch)
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(ListPage);
+export default connect(mapStateToProps, mapDispatchToProps)(ListPage)

@@ -1,17 +1,17 @@
-## description
+## Description
 A react server side render skeleton, prepare for future project.
 
-## dev
+## Dev
 ```$xslt
 yarn start:dev
 ```
 
-## prod
+## Prod
 ```bash
 yarn start:prod
 ```
 
-## todo list
+## Todo list
 
 - [x] handle css in prod
 - [x] performance [best-practice-performance](https://expressjs.com/en/advanced/best-practice-performance.html)
@@ -20,3 +20,4 @@ yarn start:prod
 - [x] organize the build process
 - [ ] add flow type check
 - [ ] redundant http request in client side
+- [ ] CI
