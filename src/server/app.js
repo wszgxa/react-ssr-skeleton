@@ -5,7 +5,7 @@ import nunjucks from 'nunjucks'
 import bodyParser from 'body-parser'
 import routes from './routes/default.js'
 const baseDir = path.resolve(__dirname, '../../');
-import { PORT, HOST , STATIC_ASSETS_CACHE_TIME_IN_SECONDS } from '../../config/env/index.js'
+import { PORT, HOST , STATIC_ASSETS_CACHE_TIME_IN_SECONDS, IS_PRODUCTION } from '../../config/env/index.js'
 
 const app = express()
 app.set('port', PORT)
@@ -21,7 +21,7 @@ app.use(logger('dev'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 const staticAssetsFromFilesystem = express.static(baseDir + '/public', {
-    maxAge: STATIC_ASSETS_CACHE_TIME_IN_SECONDS * 1000
+    maxAge: IS_PRODUCTION ? STATIC_ASSETS_CACHE_TIME_IN_SECONDS * 1000 : 0
 });
 app.use('/public', staticAssetsFromFilesystem)
 app.use('/', routes)
