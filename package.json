@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start:dev": "gulp start:dev",
-    "clean": "rm -rf public",
+    "clean": "rm -rf public target & git checkout public/manifest.json",
     "start:prod": "gulp start:prod",
     "eslint": "eslint --ext .js,.jsx src config",
     "build": "gulp build:client",
