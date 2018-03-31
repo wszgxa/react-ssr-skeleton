@@ -1,13 +1,21 @@
-## Description
-A react server side render skeleton, prepare for future project.
+## Descriptions [![CircleCI](https://circleci.com/gh/wszgxa/react-ssr-skeleton.svg?style=svg)](https://circleci.com/gh/wszgxa/react-ssr-skeleton)
 
-## Dev
-```$xslt
+A react server side skeleton repo.
+
+## Prerequisites
+
+    node:8.9.1 (nvm use)
+    yarn
+
+## DEV
+``` bash
+yarn install
 yarn start:dev
 ```
 
 ## Prod
 ```bash
+yarn start
 yarn start:prod
 ```
 
@@ -20,4 +28,4 @@ yarn start:prod
 - [x] organize the build process
 - [x] add flow type check
 - [ ] redundant http request in client side
-- [ ] CI
+- [x] CI
