@@ -1,4 +1,6 @@
 const path = require('path')
+const { common } = require('./defineEnvironment')
+
 
 module.exports = {
   module: {
@@ -22,5 +24,8 @@ module.exports = {
       '@client': path.join(__dirname, '..', '..', '..', 'src/client'),
       '@server': path.join(__dirname, '..', '..', '..', 'src/server')
     }
-  }
+  },
+  plugins: [
+    common
+  ]
 }

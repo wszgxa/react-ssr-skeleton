@@ -26,7 +26,7 @@ module.exports = {
     __filename: true
   },
   plugins: [
-    new webpack.NormalModuleReplacementPlugin(/\.s?css$/, path.join(__dirname, './processCssInServer.js'))
+    new webpack.NormalModuleReplacementPlugin(/\.s?css$/, path.join(__dirname, './processUnmatchedAssets.js'))
   ],
   externals: nodeModules
 }

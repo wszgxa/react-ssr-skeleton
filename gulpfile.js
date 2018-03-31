@@ -23,7 +23,7 @@ gulp.task('dev:server', shell.task(SERVER_DEV))
 
 // prod
 gulp.task('build:client', shell.task(CLIENT_BUILD))
-gulp.task('build:server', shell.task(SERVER_BUILD))
+gulp.task('build:server', ['build:client'], shell.task(SERVER_BUILD))
 
 gulp.task('start:dev', ['dev:client', 'dev:server'])
-gulp.task('start:prod', ['build:client', 'build:server'], shell.task(`${NODE_ENV.prod} node ./target/App.js`))
+gulp.task('start:prod', ['build:server'], shell.task(`${NODE_ENV.prod} node ./target/App.js`))

@@ -1,5 +1,7 @@
+const NODE_ENV = process.env.NODE_ENV || 'production'
 const IS_PRODUCTION = process.env.NODE_ENV === 'production'
 
-export {
+module.exports =  {
+  NODE_ENV,
   IS_PRODUCTION
 }
