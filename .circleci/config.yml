@@ -1,0 +1,54 @@
+version: 2
+
+defaults: &defaults
+  working_directory: ~/project/react-ssr-skeleton
+  docker:
+    - image: circleci/node:8.9-browsers
+
+jobs:
+  install:
+    <<: *defaults
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+            - react-ssr-skeleton-{{ .Branch }}-{{ checksum "yarn.lock" }}
+            - react-ssr-skeleton-{{ .Branch }}-
+            - react-ssr-skeleton-
+
+      - run: yarn install
+
+      - save_cache:
+          key: react-ssr-skeleton-{{ .Branch }}-{{ checksum "yarn.lock" }}
+          paths:
+            - node_modules/
+
+      - persist_to_workspace:
+          root: ~/project
+          paths:
+            - react-ssr-skeleton
+  lint-type-check:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/project
+      - run: yarn flow
+      - run: yarn eslint
+  test:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/project
+      - run: yarn test
+workflows:
+  version: 2
+  install-and-test:
+    jobs:
+      - install
+      - lint-type-check:
+          requires:
+            - install
+      - test:
+          requires:
+            - install

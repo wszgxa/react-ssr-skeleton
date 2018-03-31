@@ -17,7 +17,7 @@ describe('#generateProdAssets', () => {
         '/main.js': '/test-js',
         '/main.css': '/test-css'
       }
-    })
+    }, {virtual: true})
     expect(generateProdAssets()).toEqual({
       scriptAssets: '<script src="/public/test-js" type="text/javascript"></script>',
       cssAssets: '<link rel="stylesheet" type="text/css" href="/public/test-css">'
