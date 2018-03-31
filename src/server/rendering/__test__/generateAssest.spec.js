@@ -1,3 +1,4 @@
+// @flow
 import { generateDevAssets, generateProdAssets } from '../generateAssets'
 
 describe('#generateDevAssets', () => {

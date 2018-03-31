@@ -1,8 +1,15 @@
+// @flow
 import { IS_PRODUCTION } from '../../../config/env/'
 import { generateDevAssets, generateProdAssets } from './generateAssets'
 let defaultVariables
 
-const getDefaultVariables = () => {
+type DefaultRenderVariables = {
+  title: string,
+  scriptAssets: string,
+  cssAssets: string
+}
+
+const getDefaultVariables = (): DefaultRenderVariables => {
   if (defaultVariables !== undefined) return defaultVariables
   const assets = IS_PRODUCTION ? generateProdAssets() : generateDevAssets()
   defaultVariables = {

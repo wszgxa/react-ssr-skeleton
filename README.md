@@ -18,6 +18,6 @@ yarn start:prod
 - [x] spike `babel-plugin-css-modules-transform` influence in prod
 - [x] build prod js file
 - [x] organize the build process
-- [ ] add flow type check
+- [x] add flow type check
 - [ ] redundant http request in client side
 - [ ] CI

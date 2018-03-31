@@ -1,3 +1,4 @@
+/* @flow */
 import React from 'react'
 import { hydrate } from 'react-dom'
 import { BrowserRouter } from 'react-router-dom'
@@ -22,5 +23,5 @@ const AppRouter = () => {
     </Provider>
   )
 }
-
+// flow-disable can't change document
 hydrate(<AppRouter />, document.querySelector('#root'))

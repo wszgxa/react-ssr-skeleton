@@ -1,3 +1,4 @@
+/* @flow */
 import express from 'express'
 
 import React from 'react'
@@ -39,7 +40,7 @@ router.get('*', (req, res) => {
     }
     const defaultVariables = getDefaultVariables()
     res.render('index',
-      Object.assign( defaultVariables, { data: store.getState(), content } )
+      Object.assign({}, { data: store.getState(), content }, defaultVariables )
     )
   })
 })
