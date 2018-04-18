@@ -15,7 +15,7 @@ yarn start:dev
 
 ## Prod
 ```bash
-yarn start
+yarn install
 yarn start:prod
 ```
 
