@@ -17,7 +17,7 @@ class ListPage extends Component<Props> {
   }
 
   componentDidMount() {
-    this.props.fetchLists()
+    !this.props.items && this.props.fetchLists()
   }
 
   render () {

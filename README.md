@@ -27,5 +27,5 @@ yarn start:prod
 - [x] build prod js file
 - [x] organize the build process
 - [x] add flow type check
-- [ ] redundant http request in client side
+- [x] redundant http request in client side
 - [x] CI
