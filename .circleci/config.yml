@@ -34,7 +34,7 @@ jobs:
       - attach_workspace:
           at: ~/project
       - run: yarn flow
-      - run: yarn eslint
+      - run: yarn ts-lint
   test:
     <<: *defaults
     steps:

@@ -1,0 +1,43 @@
+{
+  "extends": ["tslint:recommended", "tslint-react"],
+  "rules": {
+    "array-type": [true, "array"],
+    "ban-types": false,
+    "comment-format": [true, "check-space", "check-uppercase"],
+    "completed-docs": false,
+    "cyclomatic-complexity": false,
+    "interface-name": false,
+    "linebreak-style": [true, "LF"],
+    "max-classes-per-file": [true, 1],
+    "max-file-line-count": [true, 300],
+    "max-line-length": [true, 140],
+    "no-console": [false],
+    "no-default-export": false,
+    "arrow-parens": false,
+    "semicolon": [true, "never"],
+    "quotemark": [true, "double"],
+    "no-namespace": false,
+    "no-submodule-imports": false,
+    "no-unbound-method": false,
+    "no-empty": [true, "allow-empty-functions"],
+    "object-literal-sort-keys": false,
+    "no-unsafe-any": false,
+    "indent": [true, "spaces", 2],
+    "no-use-before-declare": true,
+    "ordered-imports": false,
+    "prefer-function-over-method": false,
+    "prefer-template": true,
+    "promise-function-async": false,
+    "space-before-function-paren": [true, "never"],
+    "strict-type-predicates": true,
+    "trailing-comma": [true, {"multiline": "never", "singleline": "never"}],
+    "no-string-literal": false,
+    "variable-name": [true, "ban-keywords"],
+    "newline-per-chained-call": false,
+    "jsx-no-multiline-js": false
+  },
+  "linterOptions": {
+    "exclude": ["node_modules/**/*.ts"],
+    "plugins": [{"name": "typescript-tslint-plugin"}]
+  }
+}

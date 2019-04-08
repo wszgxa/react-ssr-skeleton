@@ -1,31 +1,36 @@
 const path = require('path')
-const { common } = require('./defineEnvironment')
-
+const webpack = require('webpack')
 
 module.exports = {
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
+        test: /\.(ts|tsx)?$/,
         enforce: 'pre',
         exclude: /node_modules/,
-        loader: 'eslint-loader'
+        loader: 'tslint-loader'
       },
       {
-        test: /\.jsx?$/,
+        test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
-        loader: 'babel-loader'
+        loader: 'ts-loader'
       }
     ]
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.ts', '.tsx', '.js', '.json'],
     alias: {
       '@client': path.join(__dirname, '..', '..', '..', 'src/client'),
       '@server': path.join(__dirname, '..', '..', '..', 'src/server')
     }
   },
   plugins: [
-    common
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+        "HOST": JSON.stringify(process.env.HOST),
+        "PORT": JSON.stringify(process.env.PORT)
+      }
+    })
   ]
 }
