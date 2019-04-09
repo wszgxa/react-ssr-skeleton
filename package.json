@@ -7,7 +7,7 @@
     "start:dev": "gulp start:dev",
     "clean": "rm -rf public target & git checkout public/manifest.json",
     "start:prod": "gulp start:prod",
-    "lint": "tslint -p tsconfig.json",
+    "lint": "tslint --project tsconfig.json --config tslint.json",
     "build": "gulp build:client",
     "test": "jest --coverage",
     "test:watch": "jest --watch",

@@ -5,12 +5,6 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(ts|tsx)?$/,
-        enforce: 'pre',
-        exclude: /node_modules/,
-        loader: 'tslint-loader'
-      },
-      {
         test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
         loader: 'ts-loader'
@@ -18,11 +12,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.json'],
-    alias: {
-      '@client': path.join(__dirname, '..', '..', '..', 'src/client'),
-      '@server': path.join(__dirname, '..', '..', '..', 'src/server')
-    }
+    extensions: ['.ts', '.tsx', '.js', '.json']
   },
   plugins: [
     new webpack.DefinePlugin({

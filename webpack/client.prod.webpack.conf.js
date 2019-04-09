@@ -7,9 +7,9 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 
 module.exports = merge(client, {
-  entry: path.resolve(__dirname, '../..', './src/client/app'),
+  entry: path.resolve(__dirname, '..', './src/client/app'),
   output: {
-    path: path.resolve(__dirname, '../..', './public'),
+    path: path.resolve(__dirname, '..', './public'),
     filename: 'app-[hash].js'
   },
   plugins: [

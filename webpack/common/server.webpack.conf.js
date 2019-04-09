@@ -14,11 +14,11 @@ const nodeModules = fs.readdirSync('node_modules')
 module.exports = {
   name: 'server side',
   entry: {
-    App: path.join(__dirname, '..', '..', '..', 'src', 'server', 'app')
+    App: path.join(__dirname, '..', '..', 'src', 'server', 'app')
   },
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname, '../../../target')
+    path: path.resolve(__dirname, '../../target')
   },
   target: 'node',
   node: {

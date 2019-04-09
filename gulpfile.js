@@ -6,10 +6,10 @@ const NODE_ENV = {
   dev: 'NODE_ENV=development'
 }
 const WEBPACK_CONFIG = {
-  dev_client: './config/webpack/client.dev.webpack.conf.js',
-  prod_client: './config/webpack/client.prod.webpack.conf.js',
-  dev_server: './config/webpack/server.dev.webpack.conf.js',
-  prod_server: './config/webpack/server.prod.webpack.conf.js'
+  dev_client: './webpack/client.dev.webpack.conf.js',
+  prod_client: './webpack/client.prod.webpack.conf.js',
+  dev_server: './webpack/server.dev.webpack.conf.js',
+  prod_server: './webpack/server.prod.webpack.conf.js'
 }
 
 const CLIENT_DEV = `${NODE_ENV.dev} webpack --debug --env=dev --config ${WEBPACK_CONFIG.dev_client} --progress --colors --watch`
